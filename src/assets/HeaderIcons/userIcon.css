@@ -1,0 +1,23 @@
+.userContainer{
+    display: inline-block;
+}
+
+.userContainer img{
+    margin: 15px;
+}
+
+.bellIcon{
+    height: 50px;
+    width: 50px;
+}
+
+.avatar{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.userContainer a{
+    padding: 0px;
+    margin: 0px;
+}
