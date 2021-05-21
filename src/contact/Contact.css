@@ -1,0 +1,143 @@
+.contact{
+    background: white;
+  
+    align-self:center;
+  }
+  
+  
+  .contact_header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: calc(10px + 2vmin);
+      color: white;
+  }
+  
+  .box_title {
+      color: gray;
+      text-align: center;
+      top: 0;
+      margin-top: 7%;
+      margin-bottom: 5%;
+  }
+  
+  .box_title h1 {
+      font-size: 40px;
+      font-weight: bold;
+  
+  }
+  
+  .box_title a {
+      font-size: 14px;
+      color: gray;
+      font-weight:500;
+  }
+  
+  .box_text {
+      display: block;
+      align-self: center;
+  }
+  
+  .box_text h1{
+      color: black;
+      font-size: 14px;
+      font-weight: bold;
+      margin-top:40px;
+      margin-left:20px;
+  }
+  
+  .box_text a{
+      color: gray;
+      font-size: 12px;
+      font-weight: normal;
+      text-align: left;
+      display: inline-block;
+      margin-left:20px;
+      margin-right:20px;
+  }
+  
+  .box_text .box_2 h1{
+      color: black;
+      font-size: 18px;
+      margin-top:40px;
+      font-weight: bold;
+  
+  }
+  
+  .box_text .box_2 a{
+      color: gray;
+      font-size: 14px;
+      font-weight: normal;
+  
+  }
+  
+  
+  
+  
+  .box_1 {
+      float: left;
+      width: 200px;
+      height: 250px;
+      border-left: solid 1px #e7e7e7;
+      border-right: solid 1px #e7e7e7;
+      border-bottom: solid 3px #dcdcdc;
+      border-radius: 20px 20px 20px 20px;
+      margin-top: 50px;
+      
+  }
+  
+  .box_2 {
+      float: left;
+      width: 200px;
+      height: 300px;
+      border-left: solid 1px #e7e7e7;
+      border-right: solid 1px #e7e7e7;
+      border-bottom: solid 3px #dcdcdc;
+      border-radius: 20px 20px 20px 20px;
+      margin-left: 60px;
+      margin-right: 60px;
+      
+  }
+  
+  .box_3 {
+      float: left;
+      width: 200px;
+      height: 250px;
+      border-left: solid 1px #e7e7e7;
+      border-right: solid 1px #e7e7e7;
+      border-bottom: solid 3px #dcdcdc;
+      border-radius: 20px 20px 20px 20px;
+      margin-top: 50px;
+      
+      
+  }
+  
+  .box_2 button {
+      width: auto;
+      height: auto;
+      color: green;
+      border-radius: 50px 50px 50px 50px;
+      border: solid 1px black;
+      border-bottom: solid 2px black;
+      align-self: center;
+      padding: 0px 10px 0px 10px;
+      display: block;
+      margin:90px auto;
+  }
+  
+  .box_3 button {
+      width: auto;
+      height: auto;
+      color: green;
+      border-radius: 50px 50px 50px 50px;
+      border: solid 1px black;
+      border-bottom: solid 2px black;
+      align-self: center;
+      padding: 0px 20px 0px 20px;
+      display: block;
+      margin: 70px auto;
+      
+     
+  }
+  

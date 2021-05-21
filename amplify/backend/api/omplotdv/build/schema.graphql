@@ -1,0 +1,173 @@
+type Car {
+  id: ID!
+  name: String!
+  type: String!
+  weight: String
+  maxSp: String
+  accel: String
+  year: String
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelCarConnection {
+  items: [Car]
+  nextToken: String
+}
+
+input ModelStringInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelIDInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelIntInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelFloatInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  between: [Float]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelBooleanInput {
+  ne: Boolean
+  eq: Boolean
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelSizeInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+}
+
+input ModelCarFilterInput {
+  id: ModelIDInput
+  name: ModelStringInput
+  type: ModelStringInput
+  weight: ModelStringInput
+  maxSp: ModelStringInput
+  accel: ModelStringInput
+  year: ModelStringInput
+  and: [ModelCarFilterInput]
+  or: [ModelCarFilterInput]
+  not: ModelCarFilterInput
+}
+
+enum ModelAttributeTypes {
+  binary
+  binarySet
+  bool
+  list
+  map
+  number
+  numberSet
+  string
+  stringSet
+  _null
+}
+
+type Query {
+  getCar(id: ID!): Car
+  listCars(filter: ModelCarFilterInput, limit: Int, nextToken: String): ModelCarConnection
+}
+
+input CreateCarInput {
+  id: ID
+  name: String!
+  type: String!
+  weight: String
+  maxSp: String
+  accel: String
+  year: String
+}
+
+input UpdateCarInput {
+  id: ID!
+  name: String
+  type: String
+  weight: String
+  maxSp: String
+  accel: String
+  year: String
+}
+
+input DeleteCarInput {
+  id: ID
+}
+
+type Mutation {
+  createCar(input: CreateCarInput!, condition: ModelCarConditionInput): Car
+  updateCar(input: UpdateCarInput!, condition: ModelCarConditionInput): Car
+  deleteCar(input: DeleteCarInput!, condition: ModelCarConditionInput): Car
+}
+
+input ModelCarConditionInput {
+  name: ModelStringInput
+  type: ModelStringInput
+  weight: ModelStringInput
+  maxSp: ModelStringInput
+  accel: ModelStringInput
+  year: ModelStringInput
+  and: [ModelCarConditionInput]
+  or: [ModelCarConditionInput]
+  not: ModelCarConditionInput
+}
+
+type Subscription {
+  onCreateCar: Car @aws_subscribe(mutations: ["createCar"])
+  onUpdateCar: Car @aws_subscribe(mutations: ["updateCar"])
+  onDeleteCar: Car @aws_subscribe(mutations: ["deleteCar"])
+}

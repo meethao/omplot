@@ -1,0 +1,62 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-omplotdv-staging-54147-authRole",
+      "UnauthRoleArn": "arn:aws:iam::450242837340:role/amplify-omplotdv-staging-54147-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::450242837340:role/amplify-omplotdv-staging-54147-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-omplotdv-staging-54147-deployment",
+      "UnauthRoleName": "amplify-omplotdv-staging-54147-unauthRole",
+      "StackName": "amplify-omplotdv-staging-54147",
+      "StackId": "arn:aws:cloudformation:us-west-2:450242837340:stack/amplify-omplotdv-staging-54147/ea2c6d20-aef6-11eb-b6bc-0a4175b26cd3",
+      "AmplifyAppId": "d1qa7ycwtwshok"
+    }
+  },
+  "auth": {
+    "omplotdv14ff6797": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "output": {
+        "UserPoolId": "us-west-2_Qr976cpCZ",
+        "AppClientIDWeb": "4k3egl58bcg08hfphis8d6ctgt",
+        "AppClientID": "69g5rruaa617e6gi77dsuopsqe",
+        "IdentityPoolId": "us-west-2:63bead62-032e-446c-8f46-d8bcd5a9fda4",
+        "IdentityPoolName": "omplotdv14ff6797_identitypool_14ff6797__staging",
+        "UserPoolName": "omplotdv14ff6797_userpool_14ff6797"
+      },
+      "lastPushTimeStamp": "2021-05-21T04:05:41.687Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-omplotdv-staging-54147-deployment/amplify-cfn-templates/auth/omplotdv14ff6797-cloudformation-template.yml",
+        "logicalId": "authomplotdv14ff6797"
+      },
+      "lastPushDirHash": "qNC0UgaS6UBm8/g6v0ulM+Ot9tE="
+    }
+  },
+  "api": {
+    "omplotdv": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authomplotdv14ff6797"
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "42lszh4fbzd37cvohbpsnhws4a",
+        "GraphQLAPIEndpointOutput": "https://gcd7uvasgfgflmgzwgwzhcjucm.appsync-api.us-west-2.amazonaws.com/graphql"
+      },
+      "lastPushTimeStamp": "2021-05-21T04:05:41.687Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-omplotdv-staging-54147-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apiomplotdv"
+      },
+      "lastPushDirHash": "liPggFKzWy2lAarqVikI/GK11yw="
+    }
+  }
+}

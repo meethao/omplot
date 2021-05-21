@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-omplotdv-staging-54147-authRole",
+      "UnauthRoleArn": "arn:aws:iam::450242837340:role/amplify-omplotdv-staging-54147-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::450242837340:role/amplify-omplotdv-staging-54147-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-omplotdv-staging-54147-deployment",
+      "UnauthRoleName": "amplify-omplotdv-staging-54147-unauthRole",
+      "StackName": "amplify-omplotdv-staging-54147",
+      "StackId": "arn:aws:cloudformation:us-west-2:450242837340:stack/amplify-omplotdv-staging-54147/ea2c6d20-aef6-11eb-b6bc-0a4175b26cd3",
+      "AmplifyAppId": "d1qa7ycwtwshok"
+    },
+    "categories": {
+      "auth": {
+        "omplotdv14ff6797": {}
+      }
+    }
+  }
+}

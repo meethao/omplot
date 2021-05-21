@@ -1,0 +1,14 @@
+{
+    "CreateAPIKey": 0,
+    "AppSyncApiName": "omplotdv",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authomplotdv14ff6797",
+            "Outputs.UserPoolId"
+        ]
+    },
+    "S3DeploymentBucket": "amplify-omplotdv-staging-54147-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/c23a86823e2a7ae38fbb86ecfb86f39fb4f1b69c"
+}

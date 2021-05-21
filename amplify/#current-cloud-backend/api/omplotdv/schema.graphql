@@ -1,0 +1,9 @@
+type Car @model {
+  id: ID!
+  name: String!
+  type: String!
+  weight: String
+  maxSp: String
+  accel: String
+  year: String
+}

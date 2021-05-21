@@ -1,0 +1,16 @@
+
+  .aligncenter {
+    clear: both;
+    display: inline;
+    margin:auto;
+    width: 80%;
+    height: auto;
+    padding-left: 45%;
+
+}
+.alignright {
+
+  display: inline;
+  width: 10%;
+  float: right;
+}
